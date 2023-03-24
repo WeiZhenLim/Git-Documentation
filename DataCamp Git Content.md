@@ -1,4 +1,4 @@
-# <u> Git Documentations </u>
+# <u> Git Documentations by Lim Wei Zhen</u>
 Most of the contents below are created with reference to DataCamp.
 
 ## <u> **Section 1: Introduction to Git** </u>
