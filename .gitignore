@@ -1,0 +1,2 @@
+# ginore ALL .code-workspace files
+*.code-workspace
