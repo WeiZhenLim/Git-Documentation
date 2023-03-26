@@ -14,7 +14,6 @@ Most of the contents below are created with reference to DataCamp.
     - The file type.
    - When it was last saved.
 <br/>
-<br/>
 
 ### **What is Version Control?**
 1. Version control is a group of systems and processes
@@ -29,12 +28,10 @@ Most of the contents below are created with reference to DataCamp.
     - Identify a particular version.
     - Revert changes.
 <br/>
-<br/>
 
 ### **Why is Version Control important?**
 Version control is important **to keep track of changes, and keep every team member working on the right version**.\
 Reference: [Link](https://www.perforce.com/blog/vcs/what-is-version-control#:~:text=version%20control%20works.-,Why%20Is%20Version%20Control%20Software%20Important%3F,team%20members%20will%20collaborate%20on.)
-<br/>
 <br/>
 
 ### **Git**
@@ -44,14 +41,12 @@ Reference: [Link](https://www.perforce.com/blog/vcs/what-is-version-control#:~:t
 
 ** Take note that Git is not GitHub, but it is common to use Git with GitHub.
 <br/>
-<br/>
 
 ### **Benefits of Git**
 The benefits of Git are as following:
 - Git stores everything, so nothing is lost.
 - Git notifies us when there is conflicting content in files.
 - Git synchronizes across different people and computers.
-<br/>
 <br/>
 
 ### **How to use Git?**
@@ -60,7 +55,6 @@ The benefits of Git are as following:
     - is a program for executing commands.
     - can be used to easily preview, modify, or inspect files and directories.
 - Directory = Folder.
-<br/>
 <br/>
 
 ### **Useful shell commands**
@@ -132,7 +126,6 @@ The combinations of Part 1 and Part 2 is called a **repository**, which often re
 
 NOTE: Do not edit `.git` !!!!
 <br/>
-<br/>
 
 ### **Staging and Commiting**
 Staging Area
@@ -141,6 +134,8 @@ Staging Area
 Commit Changes
 - Save files/update the repo
 
+<br/>
+
 ### **Accessing the `.git` Directory**
 `.git` is a **hidden directory**. **Hidden directory** is a directory not displayed to users, typically because it sotres information to enable programs to run.
 
@@ -148,11 +143,12 @@ To access the `.git` (Hidden Directory), we can add the dash-a flag. For example
 ```
 ls -a
 ```
+<br/>
 
 ### **Git Workflow**
 The figure below is the visualization of Git Workflow.
 
-![Alt text](Image/Git%20Storage%20Workflow.png)
+![Alt text](Image/Git_Storage_Workflow.png)
 
 Using the figure above as example:
 1. Modification of `report.md` in the **Working Directory**.
@@ -165,7 +161,6 @@ In summary, the git workflow is as following:
 2. Save the draft.
 3. Commit the updated file.
 4. Repeat.
-<br/>
 <br/>
 
 ### **Saving File**
@@ -180,7 +175,6 @@ git add .
 ```
 - `.` = all files and directories in current location
 <br/>
-<br/>
 
 ### **Commit File**
 ```
@@ -190,7 +184,7 @@ By adding `-m`, we can include a log message about our commit, placing it in quo
 - Log message is useful for reference.
 - Best practice = short and concise.
 <br/>
-<br/>
+
 ### **Check Files Status**
 ```
 git status
@@ -208,7 +202,7 @@ git diff file.txt
 ```
 Sample results:
 
-![Alt text](Image/git%20diff%20image.png)
+![Alt text](Image/git_diff_image.png)
 
 Interpretation of results:\
 --- a/ = First version, or the last one to be saved\
@@ -229,7 +223,6 @@ By adding:\
 
 Note: 
 - `git diff -r` won't work if it isn't followed by `HEAD`.
-<br/>
 <br/>
 
 Command 3: Comparing all staged files with the last commit
@@ -257,7 +250,7 @@ Git commits have **three** parts:
 
 The following is the visualization of the commit structure: 
 
-![Alt text](Image/Commit%20Structure.png)
+![Alt text](Image/Commit_Structure.png)
 
 Interpretation:\
 First Commit:
@@ -278,7 +271,6 @@ Last commit:
 - Blob:
     - `summary_statistics.csv refer back to the blob in the second commit as no changes being made. For the remaning files, changes have been made hence it refer to the blob in the last commit.
 <br/>
-<br/>
 
 ### **Git Log**
 Git Log is a utility tool to review and read a history of everything that happens to be a repository.
@@ -288,7 +280,6 @@ git log
 - Press `space` to show more recent commits.
 - Press `q` to quit the log and return to the terminal.
 <br/>
-<br/>
 
 ### **Git Hash**
 Git Hash is a unique key (**hash**) that is generated after taking in the content, which will be used to store in the Git database. 
@@ -296,7 +287,6 @@ Git Hash is a unique key (**hash**) that is generated after taking in the conten
 **Hash** is a pseudo-random number generated using the hash function. **Hashes** allow data sharing between repos. If there are cases where two files are the same, then their hashes are the same. 
 
 With **hashes**, Git will only needs to compare hashes instead of comparing with the entire files.
-<br/>
 <br/>
 
 ### **Finding Particular Commit**
@@ -311,9 +301,11 @@ To show the commit that we wanted:
 git show c27fa856
 ```
 Output of `git show c27fa856`:
-![Alt text](Image/git%20show%20output.png)
+
+![Alt text](Image/git_show_output.png)
+
 <br/>
-<br/>
+
 ____
 <br/>
 
@@ -337,7 +329,6 @@ We can also use HEAD with `git show`
 ```
 git show HEAD~3
 ```
-<br/>
 <br/>
 
 ### **Compare Changes Between Two Commits**
@@ -363,8 +354,8 @@ git annotate filename.txt
 ```
 Example output:
 
-![Alt text](Image/git%20annotate.png)
-<br/>
+![Alt text](Image/git_annotate.png)
+
 <br/>
 
 ### **Summary of Command**
@@ -407,7 +398,6 @@ git checkout .
 - `.` refers to the current directory when used in a shell command.
 - Undo changes to all unstaged files in the current directory and subdirectories.
 - This command must be run in the main directory.
-<br/>
 <br/>
 
 ### **Unstaging and Undoing**
@@ -472,7 +462,6 @@ If the commit was the second to last commit, we can also use:
 git checkout HEAD~1 filename.txt
 ```
 <br/>
-<br/>
 
 ### **Restoring A Repo To A Previous State**
 To restore a repo to the previous state, we can:
@@ -496,7 +485,6 @@ git clean -f
 ```
 Take note that `-f` cannot be undone!!!
 <br/>
-<br/>
 
 ## <u>**Section 3: Git Workflow**</u>
 ## **Section 3a: Configuring Git**
@@ -508,7 +496,8 @@ git config --list
 ```
 Example Output:
 
-![Alt text](Image/git%20config%20--list%20ouput.png)
+![Alt text](Image/git_config_--list_ouput.png)
+
 `user.email` and `user.name` are needed by some commands, so setting these saves time. Note that `user.email` and `user.name` are **global** settings.
 
 Git has three levels of settings:
@@ -541,7 +530,6 @@ git config --global user.name 'Lim Wz'
 ```
 Take note that, if we don't use `''` and the `user.name` has a space, Git would save `user.name` as `Lim`.
 <br/>
-<br/>
 
 ### **Using An Alias**
 Alias can be set up through the global settings. Alias is typically used to shorten a command.
@@ -556,7 +544,6 @@ git ci
 ```
 **IMPORATANT: Be careful not to overwrite exisiting commands!**
 <br/>
-<br/>
 
 ### **Tracking Aliases**
 To track the list of aliases, we can use:
@@ -566,8 +553,8 @@ git config --global --list
 Output format: `alias.aliasname=command`  
 Example:
 
-![Alt text](Image/Aliases%20Output.png)
-<br/>
+![Alt text](Image/Aliases_Output.png)
+
 <br/>
 
 ### **Ignoring Specific Files**
@@ -579,7 +566,7 @@ Then, by specifying the file extensions or files, we can ignore that particular 
 
 For Example:
 
-![Alt text](Image/Ignore%20Specific%20Files.png)
+![Alt text](Image/Ignore_Specific_Files.png)
 
 - `*` = Wildcard
 - Commonly ignored files are: APIs, Credentials, System Files, Software Dependencies
@@ -599,7 +586,7 @@ Git uses **branches** to systematically track multiple versions of files. In eac
 
 The following figure is the visualization of branches. 
 
-![Alt text](Image/Branch%20Visualization.png)
+![Alt text](Image/Branch_Visualization.png)
 
 Each boxes in the figure is reffering to commit, and there are total of three branches, namely:
 1. Main Branch:
@@ -611,7 +598,6 @@ Each boxes in the figure is reffering to commit, and there are total of three br
 
 From the figure, two more commits were made in the analysis branch before merging back to the second commit in the main branch; wherelse two more commits were made in the report branch before merging back to the third commit in the main branch.
 <br/>
-<br/>
 
 ### **Source and Destination**
 When merging two branches:
@@ -622,7 +608,7 @@ When merging two branches:
 Using the branch visualization above as an example, when `Analysis` merged into `Main`: 
 - `Analysis` = `source`
 - `Main` = `destination`
-<br/>
+
 <br/>
 
 ### **Benefits of Branches**
@@ -630,7 +616,7 @@ The benefits of using branches:
 - Avoiding endless subdirectories.
 - Multiple users can work simultaneously.
 - Everything is tracked.
-<br/>
+
 <br/>
 
 ### **Identifying Branches**
@@ -640,7 +626,7 @@ git branch
 ```
 Example Output:
 
-![Alt text](Image/Branch%20Output.png)
+![Alt text](Image/Branch_Output.png)
 
 `*` = Current Branch
 <br/>
@@ -670,13 +656,13 @@ Standard git diff output will be produce.
 It is common to switch branches when we are working on a project, the reasons are:
 - It is common to work on different components of a project simultaneously.
 - Branches allow us to keep making progress concurrently.
-<br/>
+
 <br/>
 
 ### **Why Do We Merge Branches?**
 Let's think that the `Main` branch as the ground truth for a project and each branch is used for a specific task. Then, once the task is completed, the changes is merged back into `Main`. 
 <br/>
-<br/>
+
 
 ### **Merging Branches**
 To merge branches, we can use:
@@ -689,7 +675,7 @@ git merge summary-statistics main
 ```
 Merge Output Interpretation:
 
-![Alt text](Image/Branch%20Merge%20Output.png)
+![Alt text](Image/Branch_Merge_Output.png)
 
 - First Line = Commit Hashes
 - Second Line = Type of Merge
@@ -707,7 +693,7 @@ Conflict occurs when a file in different branches has different contents that pr
 For Example:  
 The following figure shows the output when conflict occurs during merging:
 
-![Alt text](Image/Conflict%20Output.png)
+![Alt text](Image/Conflict_Output.png)
 
 Following the Git's advice, open the file to check the conflicts, using:
 ```
@@ -715,7 +701,7 @@ nano todo.txt
 ```
 **`nan todo.txt`** Output:
 
-![Alt text](Image/Check%20Conflict.png)
+![Alt text](Image/Check_Conflict.png)
 
 Output Interpretation:
 1. The first line starting with arrows pointing to the left and the word `HEAD` indicates that lines beneath it contain the file's contents in the latest commit of the current branch.
@@ -764,13 +750,12 @@ Repo stores in our local system is called local repo and it is only available wi
 
 Commonly, a remote repo is used for collaborative work/project. Remote repo is a repo stored in the cloud through an online repo hosting service such as GitHub.
 <br/>
-<br/>
 
 ### **Why Use Remote Repos?**
 Benefits of remote repos:
 - Everything is backed up.
 - Collaboration, regardless of location.
-<br/>
+
 <br/>
 
 ### **Clone Local Repo**
@@ -817,7 +802,6 @@ git remote add name URL
 ```
 **IMPORTANT: Defining remote anmes is useful for merging branches**
 <br/>
-<br/>
 
 ### **Collboration On Git Projects**
 When several people are collaborating on a Git project, in practice, they will:
@@ -827,7 +811,6 @@ When several people are collaborating on a Git project, in practice, they will:
 4. Synchronize their changes between the remote and local repos. 
 
 This means that the remote repo should be the source of truth for the project, where the latest versions of files that are not drafts can be located.
-<br/>
 <br/>
 
 ### **Fetching From Remote**
@@ -853,7 +836,6 @@ git pull NameofRemote Branch
 ```
 **IMPORTANT: It is important to save (commit) locally before pulling from a `remote`.**
 <br/>
-<br/>
 
 ### **Pushing To Remote**
 Before pushing the content to the remote, we will need to commit the files first. Once the files are saved, we can use:
@@ -861,7 +843,6 @@ Before pushing the content to the remote, we will need to commit the files first
 git push remote local_branch
 ```
 Push into **`remote` from `local_branch`**.
-<br/>
 <br/>
 
 ### **Push/Pull Workflow**
@@ -872,5 +853,4 @@ The typical push/pull workflow is as follows:
 4. Push the updated local repo to the remote.
 
 **IMPORTANT: Do not attempt to push local to remote as it will result in large amount of conflicts.**
-<br/>
 <br/>
